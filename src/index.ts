@@ -28,10 +28,7 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     // note: "getRandom" to be replaced with latency-aware routing in the near future
     const containerInstance = await getRandom(env.MY_CONTAINER, 3);
-    console.log(request);
-
     const rs = await containerInstance.fetch(request);
-    console.log(rs);
     return rs;
   },
 };
