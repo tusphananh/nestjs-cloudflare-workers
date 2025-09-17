@@ -21,7 +21,7 @@ RUN npm install -g pnpm && pnpm install --frozen-lockfile
 RUN pnpm build
 
 # Expose port (default NestJS port)
-EXPOSE 3000
+EXPOSE 8080
 
 # Run the NestJS app
 CMD ["pnpm", "start:prod"]
